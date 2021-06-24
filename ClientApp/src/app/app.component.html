@@ -1,0 +1,12 @@
+
+  <h1>Aww Reddit Stuff</h1>
+
+  <button (click)="loadAwwData()">Load It</button><br /><br />
+  <ng-container *ngIf="awwreddit && awwreddit.data">
+    <h2>Reddit Biznis</h2>
+<div *ngFor="let item of awwreddit.data.children">
+
+    <app-show-reddit [ritem]="item.data"></app-show-reddit>
+</div>
+    
+  </ng-container>
